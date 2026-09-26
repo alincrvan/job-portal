@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Navigate, useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { JOB_SOURCES } from "../constants/jobSources";
 import { DataContext } from "../context/DataContext";
 import { signUpSchema } from "../schemas/signUpSchema";
@@ -13,7 +13,10 @@ export default function JobForm() {
   const job = filteredJobs.find((job) => job.id.toString() === id);
 
   const {
-    register, handleSubmit, formState: { errors, isSubmitting }, reset,
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     resolver: zodResolver(signUpSchema),
   });
@@ -27,91 +30,177 @@ export default function JobForm() {
   return (
     <div className="form-container">
       <h1>{job?.title ?? "Position"}</h1>
+
       <form onSubmit={handleSubmit(onSubmit)} className="job-form">
+
+        {/* Full Name */}
         <div className="form-group">
           <label htmlFor="fullName">Full Name</label>
-          <input id="fullName" type="text" {...register("fullName")} />
-          {errors.fullName && <p>{errors.fullName.message}</p>}
+
+          <input
+            id="fullName"
+            type="text"
+            {...register("fullName")}
+            className={errors.fullName ? "input-error" : ""}
+          />
+
+          {errors.fullName && (
+            <p className="error-text">{errors.fullName.message}</p>
+          )}
         </div>
 
+        {/* Email */}
         <div className="form-group">
           <label htmlFor="email">Email</label>
+
           <input
             autoComplete="email"
             id="email"
             type="email"
-            {...register("email")} />
-          {errors.email && <p>{errors.email.message}</p>}
+            {...register("email")}
+            className={errors.email ? "input-error" : ""}
+          />
+
+          {errors.email && (
+            <p className="error-text">{errors.email.message}</p>
+          )}
         </div>
 
+        {/* Phone */}
         <div className="form-group">
           <label htmlFor="phone">Phone Number</label>
+
           <input
             autoComplete="tel"
             id="phone"
             type="tel"
-            {...register("phone")} />
-          {errors.phone && <p>{errors.phone.message}</p>}
+            {...register("phone")}
+            className={errors.phone ? "input-error" : ""}
+          />
+
+          {errors.phone && (
+            <p className="error-text">{errors.phone.message}</p>
+          )}
         </div>
 
+        {/* Referrer */}
         <div className="form-group">
-          <label htmlFor="referrer">Where did you hear about us?</label>
-          <select id="referrer" {...register("referrer")}>
+          <label htmlFor="referrer">
+            Where did you hear about us?
+          </label>
+
+          <select
+            id="referrer"
+            {...register("referrer")}
+            className={errors.referrer ? "input-error" : ""}
+          >
             <option value="">Select an option</option>
+
             {JOB_SOURCES.map((site) => (
               <option key={site} value={site}>
                 {site}
               </option>
             ))}
           </select>
-          {errors.referrer && <p>{errors.referrer.message}</p>}
+
+          {errors.referrer && (
+            <p className="error-text">{errors.referrer.message}</p>
+          )}
         </div>
 
+        {/* Salary */}
         <div className="form-group">
           <label htmlFor="salaryExpectation">
             What are your salary expectations?
           </label>
+
           <input
             id="salaryExpectation"
             type="number"
-            {...register("salaryExpectation")} />
+            {...register("salaryExpectation")}
+            className={errors.salaryExpectation ? "input-error" : ""}
+          />
+
           {errors.salaryExpectation && (
-            <p>{errors.salaryExpectation.message}</p>
+            <p className="error-text">
+              {errors.salaryExpectation.message}
+            </p>
           )}
         </div>
 
+        {/* Start Date */}
         <div className="form-group">
-          <label htmlFor="startDate">When can you start?</label>
-          <input id="startDate" type="date" {...register("startDate")} />
-          {errors.startDate && <p>{errors.startDate.message}</p>}
+          <label htmlFor="startDate">
+            When can you start?
+          </label>
+
+          <input
+            id="startDate"
+            type="date"
+            {...register("startDate")}
+            className={errors.startDate ? "input-error" : ""}
+          />
+
+          {errors.startDate && (
+            <p className="error-text">{errors.startDate.message}</p>
+          )}
         </div>
 
+        {/* Message */}
         <div className="form-group">
-          <label htmlFor="message">Message to Hiring Team? (Optional)</label>
-          <textarea id="message" rows="4" {...register("message")} />
+          <label htmlFor="message">
+            Message to Hiring Team? (Optional)
+          </label>
+
+          <textarea
+            id="message"
+            rows="4"
+            {...register("message")}
+          />
         </div>
 
+        {/* Resume */}
         <div className="form-group">
-          <label htmlFor="resume">Upload your resume</label>
+          <label htmlFor="resume">
+            Upload your resume
+          </label>
+
           <input
             id="resume"
             type="file"
             accept="application/pdf"
-            {...register("resume")} />
-          {errors.resume && <p>{errors.resume.message}</p>}
+            {...register("resume")}
+            className={errors.resume ? "input-error" : ""}
+          />
+
+          {errors.resume && (
+            <p className="error-text">{errors.resume.message}</p>
+          )}
         </div>
 
+        {/* Agreement */}
         <div className="form-group checkbox-group">
           <label htmlFor="agreement" className="checkbox-label">
-            <input id="agreement" type="checkbox" {...register("agreement")} />
+            <input
+              id="agreement"
+              type="checkbox"
+              {...register("agreement")}
+            />
+
             <span>
               You agree to the privacy statement{" "}
               <span className="required">*</span>
             </span>
           </label>
-          {errors.agreement && <p>{errors.agreement.message}</p>}
+
+          {errors.agreement && (
+            <p className="error-text">
+              {errors.agreement.message}
+            </p>
+          )}
         </div>
 
+        {/* Submit */}
         <button
           type="submit"
           className="btn-submit btn-primary"
@@ -119,7 +208,9 @@ export default function JobForm() {
         >
           {isSubmitting ? "Submitting..." : "Submit Application"}
         </button>
+
       </form>
     </div>
   );
 }
+
