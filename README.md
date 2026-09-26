@@ -1,12 +1,40 @@
-# React + Vite
+# Job Portal Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional React-based job search platform built to demonstrate front-end development skills, state management, and component architecture.
 
-Currently, two official plugins are available:
+## 🚀 Overview
+This application provides a clean, searchable interface for users to browse and filter job listings. It was built as a portfolio project to showcase proficiency in modern React patterns.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+*   **Frontend:** React (Vite)
+*   **State Management:** React Context API
+*   **Styling:** CSS3
+*   **Routing:** React Router DOM
+*   **Data Validation:** Zod
+*   **Testing:** Vitest & React Testing Library
 
-## Expanding the ESLint configuration
+## 🔑 Key Features
+*   **Advanced Filtering:** Dynamically filter jobs by department, location, and experience.
+*   **Search Functionality:** Real-time job title searching.
+*   **Sorting:** Sort listings by various headers (Title, Department, etc.).
+*   **Pagination:** Efficient data display using custom hooks.
+*   **Responsive UI:** Mobile-friendly design.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Technical Highlights
+*   **Custom Hooks:** Implemented reusable hooks (e.g., `useFilteredJobs`, `useSort`, `usePagination`) to decouple business logic from UI components.
+*   **Context API:** Managed global application state (jobs, search, and filters) without prop drilling.
+*   **Testing:** Includes a suite of unit tests for core logic and component interactions using Vitest.
+
+## 🚀 How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
