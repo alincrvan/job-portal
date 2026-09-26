@@ -15,7 +15,7 @@ export default function JobRow({ job, headers }) {
     >
       {headers.map(({ key, label }) => (
         <td key={key} data-label={label}>
-          <Link to={`/jobs/${job.id}`} state={{ fromHome: true }}>
+          <Link to={`/jobs/${job.id}`}>
             {key === "postedDate" ? formatDate(job[key]) : job[key]}
           </Link>
         </td>
