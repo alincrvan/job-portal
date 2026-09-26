@@ -1,0 +1,33 @@
+.missing-page {
+min-height: 80vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+}
+ 
+.missing-card {
+max-width: 500px;
+text-align: center;
+background: var(--bg-surface);
+padding: 3rem;
+border-radius: var(--radius-lg);
+box-shadow: var(--shadow-lg);
+}
+ 
+.missing-card h1 {
+font-size: 5rem;
+color: var(--primary);
+line-height: 1;
+margin-bottom: 0.5rem;
+}
+ 
+.missing-card h2 {
+margin-bottom: 1rem;
+color: var(--text-primary);
+}
+ 
+.missing-card p {
+color: var(--text-secondary);
+margin-bottom: 2rem;
+}

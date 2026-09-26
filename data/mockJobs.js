@@ -1,0 +1,200 @@
+export const mockJobs =  [
+        {
+            "id": 1,
+            "title": "Full Stack Developer",
+            "department": "IT",
+            "location": "Wien",
+            "postedDate": "2005-04-01",
+            "description": "Building and maintaining web applications using front-end and back-end technologies.",
+            "experience": "Expert"
+        },
+        {
+            "id": 2,
+            "title": "Software Engineer",
+            "department": "IT",
+            "location": "Linz",
+            "postedDate": "2025-04-02",
+            "description": "Developing scalable software solutions with modern programming languages.",
+            "experience": "Student/Intern"
+        },
+        {
+            "id": 3,
+            "title": "Data Scientist",
+            "department": "Analytical",
+            "location": "Wien",
+            "postedDate": "2022-08-13",
+            "description": "Analyzing large datasets to extract valuable business insights.",
+            "experience": "Student/Intern"
+        },
+        {
+            "id": 4,
+            "title": "A Product Manager",
+            "department": "Business",
+            "location": "Salzburg",
+            "postedDate": "2015-04-04",
+            "description": "Leading product development and strategy to deliver impactful solutions.",
+            "experience": "Junior Managers"
+        },
+        {
+            "id": 5,
+            "title": "UX/UI Designer",
+            "department": "Design",
+            "location": "Tirol",
+            "postedDate": "2025-04-05",
+            "description": "Creating user-friendly interfaces and improving user experiences.",
+            "experience": "Student/Intern"
+        },
+        {
+            "id": 6,
+            "title": "Network Administrator",
+            "department": "IT",
+            "location": "Wien",
+            "postedDate": "2025-04-06",
+            "description": "Managing and securing the organization's network infrastructure.",
+            "experience": "Junior Managers"
+        },
+        {
+            "id": 7,
+            "title": "Cybersecurity Analyst",
+            "department": "Security",
+            "location": "Berginz",
+            "postedDate": "2010-04-07",
+            "description": "Identifying and mitigating security threats to protect data and systems.",
+            "experience": "Professional"
+        },
+        {
+            "id": 8,
+            "title": "Marketing Specialist",
+            "department": "Marketing",
+            "location": "Graz",
+            "postedDate": "2025-04-08",
+            "description": "Developing campaigns to engage customers and boost brand awareness.",
+            "experience": "Professional"
+        },
+        {
+            "id": 9,
+            "title": "HR Manager",
+            "department": "Human Resources",
+            "location": "Klagenfurt",
+            "postedDate": "2023-04-15",
+            "description": "Overseeing employee relations, recruitment, and workplace culture.",
+            "experience": "Junior Managers"
+        },
+        {
+            "id": 10,
+            "title": "Finance Analyst",
+            "department": "Finance",
+            "location": "Villach",
+            "postedDate": "2020-11-10",
+            "description": "Assessing financial data to guide business decisions and investments.",
+            "experience": "Career entry"
+        },
+        {
+            "id": 11,
+            "title": "Software Developer",
+            "department": "Astro",
+            "location": "Graz",
+            "postedDate": "2015-2-12",
+            "description": "Developing Rust Apps with Angular and other fraework.",
+            "experience": "Professional"
+        },
+        {
+            "id": 12,
+            "title": "Railway manager",
+            "department": "Transport",
+            "location": "Villach",
+            "postedDate": "2016-5-05",
+            "description": "managing rail conjections",
+            "experience": "Expert"
+        },
+        {
+            "id": 13,
+            "title": "Software Engineer",
+            "department": "IT",
+            "location": "Vienna",
+            "postedDate": "2023-11-10",
+            "description": "Developing and maintaining web applications",
+            "experience": "Intermediate"
+        },
+        {
+            "id": 14,
+            "title": "Marketing Specialist",
+            "department": "Marketing",
+            "location": "Graz",
+            "postedDate": "2023-10-22",
+            "description": "Creating and executing marketing campaigns",
+            "experience": "Beginner"
+        },
+        {
+            "id": 15,
+            "title": "Data Analyst",
+            "department": "Analytics",
+            "location": "Linz",
+            "postedDate": "2023-09-15",
+            "description": "Analyzing business data and trends",
+            "experience": "Expert"
+        },
+        {
+            "id": 16,
+            "title": "HR Coordinator",
+            "department": "Human Resources",
+            "location": "Salzburg",
+            "postedDate": "2023-08-30",
+            "description": "Managing recruitment and employee relations",
+            "experience": "Intermediate"
+        },
+        {
+            "id": 17,
+            "title": "Financial Controller",
+            "department": "Finance",
+            "location": "Innsbruck",
+            "postedDate": "2023-07-12",
+            "description": "Overseeing financial reporting and compliance",
+            "experience": "Expert"
+        },
+        {
+            "id": 18,
+            "title": "UX Designer",
+            "department": "Design",
+            "location": "Klagenfurt",
+            "postedDate": "2023-06-18",
+            "description": "Designing user-friendly interfaces",
+            "experience": "Intermediate"
+        },
+        {
+            "id": 19,
+            "title": "Operations Manager",
+            "department": "Operations",
+            "location": "Wien",
+            "postedDate": "2023-05-05",
+            "description": "Coordinating daily business operations",
+            "experience": "Expert"
+        },
+        {
+            "id": 20,
+            "title": "Legal Advisor",
+            "department": "Legal",
+            "location": "St. Pölten",
+            "postedDate": "2023-04-01",
+            "description": "Providing legal guidance and compliance support",
+            "experience": "Expert"
+        },
+        {
+            "id": 21,
+            "title": "Customer Support Agent",
+            "department": "Support",
+            "location": "Wien",
+            "postedDate": "2023-03-20",
+            "description": "Assisting customers with inquiries and issues",
+            "experience": "Beginner"
+        },
+        {
+            "id": 22,
+            "title": "Project Manager",
+            "department": "Management",
+            "location": "Wien",
+            "postedDate": "2023-02-14",
+            "description": "Leading cross-functional project teams",
+            "experience": "Intermediate"
+        }
+    ]

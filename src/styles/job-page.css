@@ -1,0 +1,76 @@
+.job-page {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.job-card {
+  width: 100%;
+  max-width: 900px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.job-hero {
+  padding: 3rem 2rem 0rem;
+  background: var(--primary-light);
+  border-bottom: 1px solid var(--border);
+}
+
+.job-hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.job-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.job-meta span {
+  background: var(--bg-surface);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.job-section {
+  text-align: left;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.job-section h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.job-section p,
+.job-section li {
+  color: var(--text-secondary);
+}
+
+.job-section ul {
+  padding-left: 1.25rem;
+}
+
+.job-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.job-actions .btn-secondary,
+.job-actions .btn-primary {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+}

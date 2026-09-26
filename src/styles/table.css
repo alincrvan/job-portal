@@ -1,0 +1,236 @@
+/* ==========================================
+   TABLES
+   ========================================== */
+
+.job-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  background-color: var(--bg-surface-muted);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+th:hover {
+  color: var(--primary);
+}
+
+td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: var(--primary-light);
+}
+
+/* ==========================================
+   COLUMN WIDTHS
+   ========================================== */
+
+th, td {
+  width: 25%;
+  text-align: center;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 50%;
+  text-align: left;
+}
+
+th:last-child,
+td:last-child {
+  width: 20%;
+  text-align: right;
+} 
+
+
+/* ==========================================
+   TABLE FOOTER
+   ========================================== */
+
+.table-footer td {
+  font-weight: 700;
+  background-color: var(--bg-surface-muted);
+  text-align: center;
+}
+
+/* ==========================================
+   JOB ARTICLE
+   ========================================== */
+
+.job_article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+
+
+/* ==========================================
+   PAGINATION
+   ========================================== */
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+
+/* ==========================================
+   Responsive
+   ========================================== */
+
+/* ==========================================
+   MOBILE JOB CARDS
+   ========================================== */
+
+@media (max-width: 600px) {
+  .table-container {
+    overflow: visible;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .job-row {
+    display: block;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 0;
+    transition: var(--transition);
+  }
+
+  .job-row:hover {
+    background-color: var(--bg-surface);
+  }
+
+  .job-row td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+    padding: 0.65rem 1rem;
+    border-bottom: none;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    text-align: right !important;
+    font-size: 0.9rem;
+  }
+
+  .job-row td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: left;
+    margin-right: 1rem;
+  }
+
+  .job-row td a {
+    color: var(--text-primary);
+    text-align: right;
+    overflow-wrap: anywhere;
+    
+  }
+
+  /* First field — usually the job title */
+  .job-row td:first-child {
+    padding-top: 1rem;
+  }
+
+  .job-row td:first-child a {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .job-row td:last-child {
+    padding-bottom: 1rem;
+  }
+
+  /* Footer */
+  .table-footer {
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  .table-footer tr {
+    display: block;
+  }
+
+  .table-footer td {
+    display: block;
+    width: 100% !important;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-surface-muted);
+    text-align: center !important;
+  }
+
+  .table-footer td::before {
+    display: none;
+  }
+}
