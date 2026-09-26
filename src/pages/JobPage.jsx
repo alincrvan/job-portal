@@ -19,12 +19,6 @@ export default function JobPage() {
     return <Missing />;
   }
 
-  const location = useLocation();
-
-  if (!location.state?.fromHome) {
-    return <Navigate to="/" replace />;
-  }
-
   return (
     <div className="job-page">
       <article className="job-card">
