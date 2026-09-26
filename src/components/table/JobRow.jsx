@@ -8,10 +8,7 @@ export default function JobRow({ job, headers }) {
     <tr
       className="job-row"
       onClick={() =>
-        navigate(`/jobs/${job.id}`, {
-          state: { fromHome: true },
-        })
-      }
+        navigate(`/jobs/${job.id}`)}
     >
       {headers.map(({ key, label }) => (
         <td key={key} data-label={label}>
