@@ -24,12 +24,6 @@ export default function JobForm() {
     reset();
   };
 
-  const location = useLocation();
-
-  if (!location.state?.fromHome) {
-    return <Navigate to="/" replace />;
-  }
-
   return (
     <div className="form-container">
       <h1>{job?.title ?? "Position"}</h1>
