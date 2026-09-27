@@ -35,7 +35,7 @@ export default function JobForm() {
 
         {/* Full Name */}
         <div className="form-group">
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName">Full Name<span className="required">*</span></label>
 
           <input
             id="fullName"
@@ -51,7 +51,7 @@ export default function JobForm() {
 
         {/* Email */}
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email<span className="required">*</span></label>
 
           <input
             autoComplete="email"
@@ -68,7 +68,7 @@ export default function JobForm() {
 
         {/* Phone */}
         <div className="form-group">
-          <label htmlFor="phone">Phone Number</label>
+          <label htmlFor="phone">Phone Number<span className="required">*</span></label>
 
           <input
             autoComplete="tel"
@@ -86,7 +86,7 @@ export default function JobForm() {
         {/* Referrer */}
         <div className="form-group">
           <label htmlFor="referrer">
-            Where did you hear about us?
+            Where did you hear about us?<span className="required">*</span>
           </label>
 
           <select
@@ -111,7 +111,7 @@ export default function JobForm() {
         {/* Salary */}
         <div className="form-group">
           <label htmlFor="salaryExpectation">
-            What are your salary expectations?
+            What are your salary expectations?<span className="required">*</span>
           </label>
 
           <input
@@ -131,7 +131,7 @@ export default function JobForm() {
         {/* Start Date */}
         <div className="form-group">
           <label htmlFor="startDate">
-            When can you start?
+            When can you start?<span className="required">*</span>
           </label>
 
           <input
@@ -162,7 +162,7 @@ export default function JobForm() {
         {/* Resume */}
         <div className="form-group">
           <label htmlFor="resume">
-            Upload your resume
+            Upload your resume<span className="required">*</span>
           </label>
 
           <input
