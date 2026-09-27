@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const signUpSchema = z.object({
-  fullName: z.string().min(3, "Full name is required"),
+  fullName: z.string().min(3, "Your full name is required"),
   email: z.email("Invalid Email"),
   phone: z
     .string()
@@ -12,11 +12,11 @@ export const signUpSchema = z.object({
     .number({ invalid_type_error: "Salary must be a number" })
     .min(1000, "Salary must be at least 1000"),
   startDate: z.coerce
-    .date({ errorMap: () => ({ message: "Please select a valid start date" }) })
+    .date({ error: "Please select a valid start date" })
     .refine((date) => !isNaN(date.getTime()), "Invalid date chosen"),
   message: z.string().optional(),
   agreement: z.literal(true, {
-    errorMap: () => ({ message: "You must agree to the privacy statement" }),
+    error: "You must agree to the privacy statement",
   }),
   resume: z
     .instanceof(FileList)
@@ -30,5 +30,3 @@ export const signUpSchema = z.object({
       message: "File size must be under 2MB",
     }),
 });
-
-// Fixed: Safely handles empty initial state values without throwing instanceof errors
